@@ -24,23 +24,30 @@ $error = false;
 
 // On définis nos constantes
 $newName = bin2hex(random_bytes(32));
-$path = "/pdf";
-$legalExtensions = array("PDF");
+$path = "pdf";
+$legalExtensions = array("pdf");
 $legalSize = "100000000" ;// 100000000 Octets = 100 MO
 
 // On récupères les infos
 $file = $_FILES["mon_fichier"];
 $actualName = $file['tmp_name'];
 $actualSize = $file['size'];
-$extension = pathinfo($_FILES['mon_fichier'], PATHINFO_EXTENSION);
+// echo $actualName;
+echo $actualSize;
+
+$extension1 = pathinfo($_FILES['mon_fichier']['name']);
+$extension = $extension1['extension'];
+
 
 // On s'assure que le fichier n'est pas vide
-if ($actualName == 0 || $actualSize == 0) {
+if ($actualName == "" || $actualSize == 0) {
+	echo 'fichier vide';
     $error = true;
 }
 
 // On vérifie qu'un fichier portant le même nom n'est pas présent sur le serveur
 if (file_exists($path.'/'.$newName.'.'.$extension)) {
+	echo 'meme nom';
     $error = true;
 }
 
