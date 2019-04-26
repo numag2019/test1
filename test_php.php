@@ -12,7 +12,7 @@
 <?php
 $var=895632;
 
-$texte="Je suis un texte test bleu et j'aime ça mais pas trop";
+$texte="Je suis un texte test bleu et j'aime ça mais pas trop lol";
 
 echo $texte ;
 echo $var;
