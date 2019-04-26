@@ -10,8 +10,10 @@
 <body>
 
 <?php
-$texte="Je sui un texte test et j'aime ça";
+$var=895632;
+$texte="Je suis un texte test et j'aime ça";
 echo $texte ;
+echo $var;
 ?>
 
 </div><!-- #global -->
