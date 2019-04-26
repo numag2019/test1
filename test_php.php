@@ -11,9 +11,12 @@
 
 <?php
 $var=895632;
+
 $texte="Je suis un texte test bleu et j'aime ça mais pas trop";
+
 echo $texte ;
 echo $var;
+
 ?>
 
 </div><!-- #global -->
