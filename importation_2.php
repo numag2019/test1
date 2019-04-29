@@ -66,6 +66,7 @@ else {
     @unlink($path.'/'.$newName.'.'.$extension);
     
     echo "Une erreur s'est produite";
+	// test
 }
 }
 ?>
